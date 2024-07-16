@@ -7,7 +7,7 @@
 ## 1.Declaración de Variables
 Declara variables para representar la información de un producto:
 
-*Nombre del producto (String)\n
+*Nombre del producto (String)/n
 *Precio (Double)
 *Disponible en inventario (Boolean)
 *Código de producto (String) Imprime todas las variables.
