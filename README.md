@@ -7,15 +7,15 @@
 ## 1.Declaración de Variables
 Declara variables para representar la información de un producto:
 
-*Nombre del producto (String)
+* Nombre del producto (String)
 
-*Precio (Double)
+* Precio (Double)
 
-*Disponible en inventario (Boolean)
+* Disponible en inventario (Boolean)
 
-*Código de producto (String) Imprime todas las variables.
+* Código de producto (String) Imprime todas las variables.
 
-```
+```Kotlin
   fun main(){
   val nombreProducto: String = "Laptop Gaming"
   val precio: Double = 1299.99
@@ -28,5 +28,20 @@ Declara variables para representar la información de un producto:
   println("Código: $codigoProducto")
 }
 ```
+### 2.Operaciones Aritméticas
+Crea dos variables numéricas y realiza las siguientes operaciones:
 
+* Suma Resta Multiplicación División Módulo Imprime el resultado de cada operación.
 
+```Kotlin
+fun main(){
+  val num1 = 20
+  val num2 = 6
+
+  println("Suma: ${num1 + num2}")
+  println("Resta: ${num1 - num2}")
+  println("Multiplicación: ${num1 * num2}")
+  println("División: ${num1 / num2}")
+  println("Módulo: ${num1 % num2}")
+}
+```
