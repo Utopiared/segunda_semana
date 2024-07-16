@@ -7,7 +7,26 @@
 ## 1.Declaración de Variables
 Declara variables para representar la información de un producto:
 
-*Nombre del producto (String)/n
+*Nombre del producto (String)
+
 *Precio (Double)
+
 *Disponible en inventario (Boolean)
+
 *Código de producto (String) Imprime todas las variables.
+
+```
+  fun main(){
+  val nombreProducto: String = "Laptop Gaming"
+  val precio: Double = 1299.99
+  val disponible: Boolean = true
+  val codigoProducto: String = "LPT-001"
+
+  println("Producto: $nombreProducto")
+  println("Precio: $precio")
+  println("Disponible: $disponible")
+  println("Código: $codigoProducto")
+}
+```
+
+
