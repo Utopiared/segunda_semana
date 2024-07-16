@@ -1,6 +1,6 @@
 # _FUNDAMENTOS KOTLIN_ :electron:
 
-convertir -tamaño 2048x1536 $file -miniatura 800x600 ![_143a8476-dfa4-4902-9a64-ae53a5e70c76](https://github.com/user-attachments/assets/4d23f31b-a958-42e3-9a46-62b2b5bb772c)
+![_143a8476-dfa4-4902-9a64-ae53a5e70c76](https://github.com/user-attachments/assets/4d23f31b-a958-42e3-9a46-62b2b5bb772c)
 
 
 *_Autora: Aura Nicte-Ha Pech Reyes._*
