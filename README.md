@@ -1,8 +1,9 @@
 # _FUNDAMENTOS KOTLIN_ :electron:
 
-![_f8f85b7e-0373-479b-8595-5ea5766dd43e](https://github.com/user-attachments/assets/11aa9363-51dd-4d38-b0cd-5bd064ace9ec)
+![_143a8476-dfa4-4902-9a64-ae53a5e70c76](https://github.com/user-attachments/assets/4d23f31b-a958-42e3-9a46-62b2b5bb772c)
 
-*Autora: Aura Nicte-Ha Pech Reyes.*
+
+*_Autora: Aura Nicte-Ha Pech Reyes._*
 
 
 ## SESION 1 ¿QUE ES KOTLIN? 💻
