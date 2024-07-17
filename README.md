@@ -6,7 +6,7 @@
 *_Autora: Aura Nicte-Ha Pech Reyes._*
 
 
-## _SESION 1 ¿QUE ES KOTLIN?_ 💻
+# _SESION 1 ¿QUE ES KOTLIN?_ 💻
 
 #### 1. Declaración de Variables
 
@@ -174,7 +174,7 @@ fun main(){
   println("IMC: ${"%.2f".format(imc)}")
 }
 ```
-## _SESIÓN 2 FUNDAMENTOS DE PROGRAMACIÓN._ 🖱️
+# _SESIÓN 2 FUNDAMENTOS DE PROGRAMACIÓN._ 🖱️
 
 #### 1. Calculadora de volumen de cilindro
 
@@ -321,7 +321,7 @@ fun main() {
 ```
 
 
-## _SESIÓN 3: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE I_ 👨‍💻
+# _SESIÓN 3: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE I_ 👨‍💻
 
 
 #### 1. Clase Libro
@@ -466,7 +466,7 @@ fun main() {
 }
 ```
 
-## _SESIÓN 4: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE II_ 🔄
+# _SESIÓN 4: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE II_ 🔄
 
 #### 1. Herencia y Polimorfismo
 
@@ -675,7 +675,7 @@ fun main() {
     verificarHabilidades(triatleta)
 }
 ```
-## _Sesión 5: Programación funcional_ :accessibility:
+# _Sesión 5: Programación funcional_ :accessibility:
 
 #### 1. Expresiones Lambda
 
@@ -793,7 +793,7 @@ println("Números impares: $impares")
 
 
 
-## Sesión 6: Interoperabilidad Kotlin-Java
+# Sesión 6: Interoperabilidad Kotlin-Java
 
 #### 1. Uso de Clases Java en Kotlin
 
@@ -924,7 +924,7 @@ public class Main {
 }
 ```
 
-## Sesión 7: Manejo de errores 🩹
+# Sesión 7: Manejo de errores 🩹
 
 #### 1. Null Safety
 
@@ -1003,7 +1003,7 @@ fun dividir(a: Int, b: Int): Int {
 }
 ```
 
-## Sesión 8: Programacion Asíncrona
+# Sesión 8: Programacion Asíncrona
 
 
 #### 1. Lanzamiento de una corrutina básica
