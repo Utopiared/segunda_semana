@@ -8,7 +8,7 @@
 
 ## _SESION 1 ¿QUE ES KOTLIN?_ 💻
 
-#### 1.Declaración de Variables
+#### 1. Declaración de Variables
 
 Declara variables para representar la información de un producto:
 
@@ -33,7 +33,7 @@ Declara variables para representar la información de un producto:
   println("Código: $codigoProducto")
 }
 ```
-#### 2.Operaciones Aritméticas
+#### 2. Operaciones Aritméticas
 Crea dos variables numéricas y realiza las siguientes operaciones:
 
 * Suma Resta Multiplicación División Módulo Imprime el resultado de cada operación.
@@ -50,7 +50,7 @@ fun main(){
   println("Módulo: ${num1 % num2}")
 }
 ```
-#### 3.Incremento y Decremento
+#### 3. Incremento y Decremento
 Declara una variable numérica e:
 
 * Incrementa su valor en 1 y muestra el resultado Decrementa su valor en 1 y muestra el resultado:
@@ -63,7 +63,7 @@ fun main(){
 }
 ```
 
-#### 4.Operadores de Asignación Compuesta
+#### 4. Operadores de Asignación Compuesta
 
 Declara una variable numérica y utiliza operadores de asignación compuesta para:
 
@@ -82,7 +82,7 @@ fun main(){
   println("Después de dividir entre 4: $numero")
 }
 ```
-#### 5.Comparaciones
+#### 5. Comparaciones
 
 Declara dos variables numéricas y utiliza operadores de comparación para:
 
@@ -98,7 +98,7 @@ fun main(){
 }
 ```
 
-#### 6.Operaciones con Strings
+#### 6. Operaciones con Strings
 
 Declara dos variables de tipo String y:
 
