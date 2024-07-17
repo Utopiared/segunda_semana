@@ -733,6 +733,63 @@ println("Lista duplicada: $listaDoble")
 
 
 
+#### 4. Filter y Map
+
+* Utiliza filter para obtener solo las palabras que tengan más de 5 letras, y luego usa map para convertir estas palabras a mayúsculas.
+
+ ```Kotlin
+fun main() {
+    val palabras = listOf("gato", "perro", "elefante", "ratón", "hipopótamo")
+    
+    val resultado = palabras
+        .filter { it.length > 5 }
+        .map { it.uppercase() }
+    
+    println(resultado)
+}
+```
+
+* Ejemplo de map
+
+* Crea una función que tome una lista de temperaturas en Celsius y las convierta a Fahrenheit.
+* Luego, en la función main, crea una lista de temperaturas en Celsius, aplica la conversión, e imprime los resultados.
+
+```Kotlin
+fun CelsiusaFahrenheit(temperaturas: List<Double>): List<Double> {
+    return temperaturas.map { it * 9/5 + 32}
+}
+fun main(){
+    
+ val temperaturasC = listOf(10.0, 120.0, 40.0, 38.0)
+ val temperaturasF = CelsiusaFahrenheit(temperaturasC)
+ println("Temperaturas en Fahrenheit: $temperaturasF")
+}
+```
+
+#### 5. Partition y FlatMap
+
+* Vamos a trabajar con una lista de números y usaremos partition para separar los números pares de los impares.
+
+```Kotlin
+
+fun main(){
+val numeros = listOf(10,6,4,8,5,2,8,9,4,3,6,7,9,10,10,10,4,6,7)
+val (pares, impares) = numeros.partition{it % 2 == 0}
+println("Números pares: $pares")
+println("Números impares: $impares")
+}
+```
+
+
+#### 6. Reduce y ForEach
+
+
+
+
+ejercicio partition:
+Vamos a trabajar con una lista de números y usaremos partition para separar los números pares de los impares.
+
+
 
 
 
