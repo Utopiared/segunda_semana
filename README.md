@@ -730,8 +730,14 @@ println("Lista duplicada: $listaDoble")
 
 #### 3. Inline Functions
 
-
-
+```Kotlin
+inline fun saludar(nombre: String){
+   println("Hola, $nombre")
+}
+fun main (){
+   println("Hi my name is Aura")
+}
+```
 
 #### 4. Filter y Map
 
@@ -783,16 +789,219 @@ println("Números impares: $impares")
 
 #### 6. Reduce y ForEach
 
+* Vamos a trabajar con una lista de números y usaremos partition para separar los números pares de los impares.
 
 
 
-ejercicio partition:
-Vamos a trabajar con una lista de números y usaremos partition para separar los números pares de los impares.
+## Sesión 6: Interoperabilidad Kotlin-Java
 
+#### 1. Uso de Clases Java en Kotlin
 
+* Crea una clase Java llamada Persona con propiedades nombre y edad, y sus respectivos getters y setters. Luego, en Kotlin, crea una instancia de esta clase y modifica sus propiedades.
 
+```Kotlin
+    // Persona.java
+public class Persona {
+    private String nombre;
+    private int edad;
 
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public int getEdad() { return edad; }
+    public void setEdad(int edad) { this.edad = edad; }
+}
+kotlinCopy// main.kt
+fun main() {
+    val persona = Persona()
+    persona.nombre = "Juan"
+    persona.edad = 25
+    println("Nombre: ${persona.nombre}, Edad: ${persona.edad}")
+}
+```
 
+#### 2. Uso de Clases Kotlin en Java
+
+* Crea una clase Kotlin llamada Producto con propiedades nombre y precio. Luego, en Java, crea una instancia de esta clase y accede a sus propiedades.
+
+```Kotlin
+// Producto.kt
+class Producto(var nombre: String, var precio: Double)
+javaCopy// Main.java
+public class Main {
+    public static void main(String[] args) {
+        Producto producto = new Producto("Laptop", 999.99);
+        System.out.println("Nombre: " + producto.getNombre() + ", Precio: " + producto.getPrecio());
+    }
+}
+```
+
+#### 3. Miembros Estáticos de Java en Kotlin
+
+* Crea una clase Java con un método estático y una constante estática. Luego, accede a estos miembros desde Kotlin.
+
+```Kotlin
+// Util.java
+public class Util {
+    public static final String VERSION = "1.0";
+    public static int sumar(int a, int b) {
+        return a + b;
+    }
+}
+// main.kt
+fun main() {
+    println("Versión: ${Util.VERSION}")
+    println("Suma: ${Util.sumar(5, 3)}")
+}
+```
+
+#### 4. Companion Object de Kotlin en Java
+
+* Crea una clase Kotlin con un companion object que contenga un método y una propiedad. Luego, accede a estos miembros desde Java.
+
+```Kotlin
+// Calculadora.kt
+class Calculadora {
+    companion object {
+        const val PI = 3.14159
+        fun cuadrado(n: Int): Int = n * n
+    }
+}
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("PI: " + Calculadora.PI);
+        System.out.println("Cuadrado de 5: " + Calculadora.Companion.cuadrado(5));
+    }
+}
+```
+
+#### 5. Uso de Keywords de Kotlin como Identificadores en Java
+
+* Crea una clase Java con métodos cuyos nombres sean palabras clave en Kotlin (por ejemplo, when, is, object). Luego, llama a estos métodos desde Kotlin.
+
+```Kotlin
+// Keywords.java
+public class Keywords {
+    public static void when() {
+        System.out.println("Método when");
+    }
+    
+    public static void is() {
+        System.out.println("Método is");
+    }
+    
+    public static void object() {
+        System.out.println("Método object");
+    }
+}
+// main.kt
+fun main() {
+    Keywords.`when`()
+    Keywords.`is`()
+    Keywords.`object`()
+}
+```
+
+#### 6. Propiedades Kotlin con Nombres Especiales en Java
+
+*Crea una clase Kotlin con propiedades cuyos nombres requieran un tratamiento especial en Java (por ejemplo, is para un booleano). Luego, accede a estas propiedades desde Java.
+
+```Kotlin
+// EstadoObjeto.kt
+class EstadoObjeto {
+    var isActivo: Boolean = false
+    var hasValor: Int = 0
+}
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        EstadoObjeto estado = new EstadoObjeto();
+        estado.setActivo(true);
+        estado.setHasValor(10);
+        System.out.println("Activo: " + estado.isActivo());
+        System.out.println("Valor: " + estado.getHasValor());
+    }
+}
+```
+
+## Sesión 7: Manejo de errores 🩹
+
+#### 1. Null Safety
+
+* var nombre: String? = "Juan"
+* ¿Cuál es la forma correcta de obtener la longitud del nombre si no es nulo, o devolver 0 si es nulo?
+
+```Kotlin
+val longitud = nombre?.length ?: 0
+```
+Esta solución utiliza el operador de llamada segura ?. y el operador Elvis ?: para manejar el caso nulo de manera concisa.
+
+#### 2. Manejo de Excepciones
+* Escribe una función que tome un String y lo convierta a un Int. Si la conversión falla, la función debe devolver null. Usa un bloque try-catch para manejar la excepción.
+
+```Kotlin
+fun convertirAEntero(str: String): Int? {
+    return try {
+        str.toInt()
+    } catch (e: NumberFormatException) {
+        null
+    }
+}
+Esta función intenta convertir el String a Int y devuelve null si ocurre una NumberFormatException.
+```
+#### 3. Smart Casting
+
+* sealed class Resultado
+* class Exito(val mensaje: String) : Resultado()
+* class Error(val codigo: Int) : Resultado()
+* Escribe una función que tome un Resultado y devuelva un String describiendo el resultado.
+
+```Kotlin
+fun describirResultado(resultado: Resultado): String {
+    return when (resultado) {
+        is Exito -> "Éxito: ${resultado.mensaje}"
+        is Error -> "Error: Código ${resultado.codigo}"
+    }
+}
+Esta función utiliza smart casting para acceder a las propiedades específicas de cada subclase de Resultado.
+```
+
+#### 4. Safe Cast
+
+* Escribe una función que tome un Any y lo convierta de manera segura a un List.
+* Si la conversión no es posible, debe devolver una lista vacía.
+
+```Kotlin
+fun convertirAListaDeStrings(objeto: Any): List<String> {
+    return (objeto as? List<*>)?.filterIsInstance<String>() ?: emptyList()
+}
+Esta función utiliza safe cast as? y filterIsInstance para realizar una conversión segura.
+```
+
+#### 5. Manejo de Null con Let
+
+* Dada una variable nullable usuario: Usuario?, escribe un código que imprima el nombre del usuario si existe, o "Usuario desconocido" si es null. Usa la función let.
+
+```Kotlin
+usuario?.let { 
+    println(it.nombre) 
+} ?: println("Usuario desconocido")
+Esta solución utiliza let para ejecutar un bloque de código solo si usuario no es null, y el operador Elvis para manejar el caso nulo.
+```
+#### 6. Lanzamiento de Excepciones Personalizadas
+
+* Crea una función dividir que tome dos enteros y devuelva su división. Si el segundo número es cero, debe lanzar una excepción personalizada llamada DivisionPorCeroException.
+
+```Kotlin
+class DivisionPorCeroException : Exception("No se puede dividir por cero")
+
+fun dividir(a: Int, b: Int): Int {
+    if (b == 0) {
+        throw DivisionPorCeroException()
+    }
+    return a / b
+}
+```
 
 
 
