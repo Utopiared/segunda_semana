@@ -6,7 +6,7 @@
 *_Autora: Aura Nicte-Ha Pech Reyes._*
 
 
-## SESION 1 ¿QUE ES KOTLIN? 💻
+## _SESION 1 ¿QUE ES KOTLIN?_ 💻
 
 #### 1.Declaración de Variables
 
@@ -63,7 +63,7 @@ fun main(){
 }
 ```
 
-### 4.Operadores de Asignación Compuesta
+#### 4.Operadores de Asignación Compuesta
 
 Declara una variable numérica y utiliza operadores de asignación compuesta para:
 
@@ -82,7 +82,7 @@ fun main(){
   println("Después de dividir entre 4: $numero")
 }
 ```
-### 5.Comparaciones
+#### 5.Comparaciones
 
 Declara dos variables numéricas y utiliza operadores de comparación para:
 
@@ -98,7 +98,7 @@ fun main(){
 }
 ```
 
-### 6.Operaciones con Strings
+#### 6.Operaciones con Strings
 
 Declara dos variables de tipo String y:
 
@@ -113,7 +113,7 @@ fun main(){
   println("Suma de longitudes: ${str1.length + str2.length}")
 }
 ```
-### 7. Cálculo de Descuento
+#### 7. Cálculo de Descuento
 
 * Crea variables para el precio de un producto y el porcentaje de descuento. Calcula el precio final después del descuento. Muestra el precio original, el descuento y el precio final.
 
@@ -129,7 +129,7 @@ fun main(){
   println("Precio final: $precioFinal")
 }
 ```
-### 8. Conversión de Tipos
+#### 8. Conversión de Tipos
 
 * Declara una variable de tipo String que contenga un número. Conviértela a Int y luego a Double. Realiza una operación aritmética con cada tipo y muestra los resultados.
 
@@ -145,7 +145,7 @@ main(){
 }
 ```
 
-### 9. Operaciones Booleanas
+#### 9. Operaciones Booleanas
 
 * Crea tres variables booleanas y utiliza operadores lógicos (AND, OR, NOT) para combinarlas. Muestra el resultado de al menos tres combinaciones diferentes.
 
@@ -161,7 +161,7 @@ fun main(){
   println("(p OR q) AND r: ${(p || q) && r}")
 }
 ```
-### 10. Cálculo de IMC
+#### 10. Cálculo de IMC
 
 * Crea variables para el peso (en kg) y la altura (en metros) de una persona. Calcula el Índice de Masa Corporal (IMC) usando la fórmula: IMC = peso / (altura * altura) Muestra el resultado del IMC.
 
@@ -174,9 +174,9 @@ fun main(){
   println("IMC: ${"%.2f".format(imc)}")
 }
 ```
-## SESIÓN 2 FUNDAMENTOS DE PROGRAMACIÓN. 🖱️
+## _SESIÓN 2 FUNDAMENTOS DE PROGRAMACIÓN._ 🖱️
 
-### 1. Calculadora de volumen de cilindro
+#### 1. Calculadora de volumen de cilindro
 
 * Crea una función que calcule el volumen de un cilindro dado su radio y altura.
 
@@ -194,7 +194,7 @@ fun main() {
 }
 ```
 
-### 2. Verificador de número primo
+#### 2. Verificador de número primo
 
 * Implementa una función que determine si un número es primo.
 
@@ -214,7 +214,7 @@ fun main() {
 }
 ```
 
-### 3. Validador de email con función local
+#### 3. Validador de email con función local
 
 * Desarrolla una función que valide una dirección de email utilizando una función local.
 
@@ -233,7 +233,7 @@ fun main() {
 }
 ```
 
-### 4. Clasificador de edades usando when
+#### 4. Clasificador de edades usando when
 
 * Crea una función que clasifique a una persona según su edad utilizando when.
 
@@ -255,7 +255,7 @@ fun main() {
 }
 ```
 
-### 5. Imprimir números pares en un rango
+#### 5. Imprimir números pares en un rango
 
 * Utiliza un ciclo for para imprimir los números pares en un rango dado.
 
@@ -273,7 +273,7 @@ fun main() {
 }
 ```
 
-### 6. Contar vocales en una lista de palabras
+#### 6. Contar vocales en una lista de palabras
 
 * Usa una lista y un ciclo para contar las vocales en una lista de palabras.
 
@@ -297,7 +297,7 @@ fun main() {
 
 ```
 
-### 7. Diccionario de sinónimos
+#### 7. Diccionario de sinónimos
 
 * Crea un mapa de sinónimos y una función para obtener sinónimos de una palabra.
 
@@ -321,10 +321,10 @@ fun main() {
 ```
 
 
-## SESIÓN 3: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE I 👨‍💻
+## _SESIÓN 3: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE I_ 👨‍💻
 
 
-### 1. Clase Libro
+#### 1. Clase Libro
 
 * Crea una clase Libro con los atributos titulo, autor y añoPublicacion. Incluye un constructor primario y un método para imprimir la información del libro.
 
@@ -342,7 +342,7 @@ fun main() {
 }
 ```
 
-### 2. Clase Cuenta Bancaria
+#### 2. Clase Cuenta Bancaria
 
 * Diseña una clase CuentaBancaria con un atributo privado saldo. Incluye métodos para depositar, retirar y consultar saldo.
 
@@ -376,7 +376,7 @@ fun main() {
 
 ```
 
-### 3. Clase con Constructor Secundario
+#### 3. Clase con Constructor Secundario
 
 * Crea una clase Rectangulo con atributos ancho y alto. Incluye un constructor primario y un constructor secundario que inicialice ambos valores con el mismo número.
 
@@ -396,7 +396,7 @@ fun main() {
 }
 ```
 
-### 4. Getters y Setters Personalizados
+#### 4. Getters y Setters Personalizados
 
 * Implementa una clase Temperatura con un atributo en Celsius. Incluye getters y setters personalizados para obtener y establecer la temperatura en Fahrenheit.
 
@@ -424,7 +424,7 @@ fun main() {
 }
 ```
 
-### 5. Clase con Propiedades Lazy
+#### 5. Clase con Propiedades Lazy
 
 * Crea una clase Calculadora con una propiedad pi que se inicialice de manera perezosa (lazy) y un método para calcular el área de un círculo.
 
@@ -448,7 +448,7 @@ fun main() {
 
 ```
 
-### 6. Clase con Métodos de Extensión
+#### 6. Clase con Métodos de Extensión
 
 
 * Define una clase Persona con propiedades nombre y edad. Luego, crea un método de extensión para imprimir un saludo personalizado.
@@ -466,9 +466,9 @@ fun main() {
 }
 ```
 
-## SESIÓN 4: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE II 🔄
+## _SESIÓN 4: PROGRAMACIÓN ORIENTADA A OBJETOS - PARTE II_ 🔄
 
-## 1. Herencia y Polimorfismo
+#### 1. Herencia y Polimorfismo
 
 * Crea una clase base Animal con un método hacerSonido().
   
@@ -509,7 +509,7 @@ fun main() {
 
 ```
 
-## 2. Clases Abstractas
+#### 2. Clases Abstractas
 
 * Crea una clase abstracta Figura con un método abstracto calcularArea().
   
@@ -543,10 +543,12 @@ fun main() {
 }
 ```
 
-## 3. Interfaces
+#### 3. Interfaces
 
 * Crea una interfaz Volador con un método volar().
+  
 * Implementa esta interfaz en las clases Ave y Avion.
+  
 * Crea una función que reciba un Volador y llame a su método volar().
 
 ```Kotlin
@@ -580,7 +582,7 @@ fun main() {
 
 ```
 
-## 4. Data Classes
+#### 4. Data Classes
 
 * Crea una data class Libro con propiedades para título, autor y año de publicación.
 * Crea una lista de libros y utiliza las funciones generadas automáticamente para copiar un libro y comparar dos libros.
@@ -602,7 +604,7 @@ fun main() {
 }
 ```
 
-## 5. Companion Object
+#### 5. Companion Object
 * Crea una clase Contador con un companion object que mantenga un contador global de instancias creadas.
 * Cada vez que se cree una nueva instancia de Contador, el contador global debe incrementarse.
 
@@ -634,7 +636,7 @@ fun main() {
 
 ```
 
-## 6. Herencia Múltiple con Interfaces
+#### 6. Herencia Múltiple con Interfaces
 
 * Crea dos interfaces Nadador y Corredor con métodos nadar() y correr() respectivamente.
 * Crea una clase Triatleta que implemente ambas interfaces.
@@ -673,18 +675,60 @@ fun main() {
     verificarHabilidades(triatleta)
 }
 ```
+## _Sesión 5: Programación funcional_ :accessibility:
+
+#### 1. Expresiones Lambda
+
+*Crea una función literal que calcule el cuadrado de un número y úsala para calcular el cuadrado de 5.
+
+```Kotlin
+val cuadrado = { x: Int -> x * x}
+	fun main() {
+        println(cuadrado(5))
+    }
+```
+
+#### 2. Funciones de Orden Superior
+
+* Uso simple de función de orden superior: Utiliza la función de orden superior filter para obtener una lista de números pares de una lista dada,  multiplos de 2 de los elementos de la lista
+  
+```Kotlin
+val numeros = listOf(1, 2, 3, 4, 5)
+val pares = numeros.filter { it % 2 == 0 }
+fun main(){
+println(pares) // Imprime: [2, 4]
+}
+```
+
+* Función de orden superior personalizada:
+* Crea una función de orden superior llamada aplicarOperacion que tome dos números y una función, y aplique esa función a los números.
+
+```Kotlin
+fun aplicarOperacion(a: Int, b: Int, operacion: (Int, Int) -> Int): Int{
+    return operacion(a,b)
+} 
+val suma = aplicarOperacion(5.0, 3.0){x, y -> x + y}
+fun main(){
+    println("Suma: $suma")
+}
+```
+
+* Crea una función de orden superior llamada transformarLista que tome una lista de números enteros y una función de transformación.
+* La función debe aplicar la transformación a cada elemento de la lista y devolver una nueva lista con los resultados.
+
+```Kotlin
+fun main(){
+fun transformarLista(lista: List<Int>, transformacion: (Int) -> Int): List <Int> {
+    return lista.map {transformacion(it)}
+}
+val numeros = listOf(1, 2, 3, 4, 5)
+val listaDoble = transformarLista(numeros){ it * 2}
+println("Lista duplicada: $listaDoble")
+}
+```
 
 
-
-
-
-
-
-
-
-
-
-
+#### 3. Inline Functions
 
 
 
