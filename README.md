@@ -928,218 +928,59 @@ public class Main {
 
 #### 1. Null Safety
 
-* var nombre: String? = "Juan"
-* ¿Cuál es la forma correcta de obtener la longitud del nombre si no es nulo, o devolver 0 si es nulo?
-
 ```Kotlin
-val longitud = nombre?.length ?: 0
+fun main() {
+    var nombre: String? = "Juan"
+    println(nombre?.length)
+    nombre = null
+    println(nombre?.length)
+    val longitud = nombre?.length ?: 0
+    println(longitud)
+} 
 ```
-Esta solución utiliza el operador de llamada segura ?. y el operador Elvis ?: para manejar el caso nulo de manera concisa.
-
-#### 2. Manejo de Excepciones
-* Escribe una función que tome un String y lo convierta a un Int. Si la conversión falla, la función debe devolver null. Usa un bloque try-catch para manejar la excepción.
+* Try Catch:
 
 ```Kotlin
-fun convertirAEntero(str: String): Int? {
-    return try {
-        str.toInt()
-    } catch (e: NumberFormatException) {
-        null
+  fun main() {
+    try{
+        val resultado = 10 / 0
+        println(resultado)
+    } catch (e:ArithmeticException) {
+        println("Error: Division por cero")
+    } finally {
+        println("Operación finalizada")
     }
 }
-Esta función intenta convertir el String a Int y devuelve null si ocurre una NumberFormatException.
-```
-#### 3. Smart Casting
-
-* sealed class Resultado
-* class Exito(val mensaje: String) : Resultado()
-* class Error(val codigo: Int) : Resultado()
-* Escribe una función que tome un Resultado y devuelva un String describiendo el resultado.
-
-```Kotlin
-fun describirResultado(resultado: Resultado): String {
-    return when (resultado) {
-        is Exito -> "Éxito: ${resultado.mensaje}"
-        is Error -> "Error: Código ${resultado.codigo}"
-    }
-}
-Esta función utiliza smart casting para acceder a las propiedades específicas de cada subclase de Resultado.
 ```
 
-#### 4. Safe Cast
-
-* Escribe una función que tome un Any y lo convierta de manera segura a un List.
-* Si la conversión no es posible, debe devolver una lista vacía.
+* Cast:
 
 ```Kotlin
-fun convertirAListaDeStrings(objeto: Any): List<String> {
-    return (objeto as? List<*>)?.filterIsInstance<String>() ?: emptyList()
-}
-Esta función utiliza safe cast as? y filterIsInstance para realizar una conversión segura.
-```
-
-#### 5. Manejo de Null con Let
-
-* Dada una variable nullable usuario: Usuario?, escribe un código que imprima el nombre del usuario si existe, o "Usuario desconocido" si es null. Usa la función let.
-
-```Kotlin
-usuario?.let { 
-    println(it.nombre) 
-} ?: println("Usuario desconocido")
-Esta solución utiliza let para ejecutar un bloque de código solo si usuario no es null, y el operador Elvis para manejar el caso nulo.
-```
-#### 6. Lanzamiento de Excepciones Personalizadas
-
-* Crea una función dividir que tome dos enteros y devuelva su división. Si el segundo número es cero, debe lanzar una excepción personalizada llamada DivisionPorCeroException.
-
-```Kotlin
-class DivisionPorCeroException : Exception("No se puede dividir por cero")
-
-fun dividir(a: Int, b: Int): Int {
-    if (b == 0) {
-        throw DivisionPorCeroException()
-    }
-    return a / b
-}
-```
-
-# Sesión 8: Programacion Asíncrona
-
-
-#### 1. Lanzamiento de una corrutina básica
-
-*Escribe una función main que lance una corrutina usando GlobalScope.launch. 
-
-*La corrutina debe imprimir "Hola desde la corrutina" después de un retraso de 1 segundo.
-
-```Kotlin
-import kotlinx.coroutines.*
-
-fun main() = runBlocking {
-    GlobalScope.launch {
-        delay(1000)
-        println("Hola desde la corrutina")
-    }
-    delay(2000) // Esperamos para que la corrutina tenga tiempo de ejecutarse
-}
-Esta solución lanza una corrutina global que imprime un mensaje después de un segundo de retraso.
-```
-
-#### 2. Uso de runBlocking
-
-* Modifica el ejercicio anterior para usar runBlocking en lugar de GlobalScope.launch. Elimina la necesidad de esperar explícitamente al final de la función main.
-
-```Kotlin
-import kotlinx.coroutines.*
-
-fun main() = runBlocking {
-    launch {
-        delay(1000)
-        println("Hola desde la corrutina")
-    }
-}
-Esta solución utiliza runBlocking para crear un scope de corrutina y launch para iniciar una nueva corrutina dentro de ese scope.
-```
-
-#### 3.Funciones de suspensión
-
-* Crea una función de suspensión llamada obtenerDatos que simule la obtención de datos de una API.
-* Debe tomar un tiempo aleatorio entre 500ms y 2000ms, y devolver un String. 
-* Usa esta función en la main.
-
-```Kotlin
-import kotlinx.coroutines.*
-import kotlin.random.Random
-
-suspend fun obtenerDatos(): String {
-    delay(Random.nextLong(500, 2000))
-    return "Datos obtenidos"
-}
-
-fun main() = runBlocking {
-    println("Iniciando obtención de datos...")
-    val resultado = obtenerDatos()
-    println(resultado)
-}
-Esta solución define una función de suspensión que simula una operación de larga duración y la utiliza en la función main.
-```
-
-#### 4. Manejo de Jobs
-
-* Lanza dos corrutinas, una que imprima números del 1 al 5 cada 500ms, y otra que imprima letras de la 'a' a la 'e' cada 750ms. Usa Jobs para esperar a que ambas corrutinas terminen antes de finalizar el programa.
-
-```Kotlin
-import kotlinx.coroutines.*
-
-fun main() = runBlocking {
-    val job1 = launch {
-        for (i in 1..5) {
-            delay(500)
-            println(i)
-        }
-    }
+fun main () {
+    val objeto: Any = "1"
     
-    val job2 = launch {
-        for (c in 'a'..'e') {
-            delay(750)
-            println(c)
-        }
+    //Unsafe Cast
+    val texto1 = objeto as String
+    println(texto1.length)
+    
+    //Safe Cast
+    val numero = objeto as? Int
+    println(numero)
+}
+```
+
+* Otro ejemplo Cast:
+fun main () {
+    val objeto: Any = 123
+    try{
+        val texto1 = objeto as String
+        println(texto1.length)
+    } catch (e: ClassCastException){
+        println("Error: No se pudo convertir objeto a String")
     }
-    
-    job1.join()
-    job2.join()
-    println("Todas las corrutinas han terminado")
-}
-Esta solución lanza dos corrutinas y utiliza join() para esperar a que ambas terminen antes de finalizar el programa.
+    val numero = objeto as? Int
+    println(numero)
 ```
 
-#### 5. Cancelación de corrutinas
 
-*Crea una corrutina que imprima números incrementalmente cada segundo. Después de 5 segundos, cancela la corrutina.
 
-```Kotlin
-import kotlinx.coroutines.*
-
-fun main() = runBlocking {
-    val job = launch {
-        var i = 1
-        while (isActive) {
-            println(i++)
-            delay(1000)
-        }
-    }
-    
-    delay(5000)
-    job.cancel()
-    println("Corrutina cancelada")
-}
-Esta solución lanza una corrutina que se ejecuta indefinidamente, pero se cancela después de 5 segundos usando job.cancel().
-```
-
-#### 6. Corrutinas en paralelo con async
-
-* Crea dos funciones de suspensión que simulen operaciones largas (por ejemplo, obtenerUsuario y obtenerPerfil).
-* Usa async para ejecutarlas en paralelo y combina sus resultados.
-
-```Kotlin
-import kotlinx.coroutines.*
-
-suspend fun obtenerUsuario(): String {
-    delay(1000)
-    return "Usuario123"
-}
-
-suspend fun obtenerPerfil(): String {
-    delay(1000)
-    return "Perfil de desarrollador"
-}
-
-fun main() = runBlocking {
-    val usuario = async { obtenerUsuario() }
-    val perfil = async { obtenerPerfil() }
-    
-    println("Usuario: ${usuario.await()}")
-    println("Perfil: ${perfil.await()}")
-}
-Esta solución utiliza async para ejecutar dos operaciones en paralelo y luego combina sus resultados usando await()
-```
